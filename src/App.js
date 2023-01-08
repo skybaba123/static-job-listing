@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import jsonData from "./data.json";
 
 function App() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setData(jsonData);
+  }, []);
+
+  const search = ["Sass", "HTML", "HTML"];
+
+  const result = data.filter((dat) => {
+    const currentTool = [dat.role, dat.level, ...dat.languages, ...dat.tools];
+    return search.some((value) => currentTool.includes(value));
+  });
+  console.log(result);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My father is good man</h1>
     </div>
   );
 }
