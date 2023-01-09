@@ -1,0 +1,92 @@
+header {
+  background-color: hsl(180, 29%, 50%);
+  background-image: url("./images/bg-header-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 180px;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(180, 31%, 95%);
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.search-container {
+  width: 80%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.clear {
+  color: hsl(180, 31%, 42%);
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.search-item-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tablet {
+  background-color: hsl(180, 32%, 88%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding-left: 5px;
+
+  p {
+    color: hsl(180, 31%, 42%);
+    font-weight: 700;
+  }
+
+  div {
+    background-color: hsl(180, 29%, 50%);
+    width: 25px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: hsl(180, 14%, 20%);
+    }
+
+    p {
+      color: #fff;
+    }
+  }
+}
+
+.jobs-container {
+  width: 80%;
+}
+
+.job-wrapper {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
