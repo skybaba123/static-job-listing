@@ -19,14 +19,14 @@ header {
 
 .search-container {
   width: 80%;
-  height: 70px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: hsl(0, 0%, 100%);
+  transform: translateY(-2rem);
 }
 
 .clear {
@@ -43,6 +43,7 @@ header {
   gap: 10px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .tablet {
@@ -80,6 +81,10 @@ header {
 
 .jobs-container {
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transform: translateY(-1rem);
 }
 
 .job-wrapper {
@@ -88,5 +93,93 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   padding: 20px;
+}
+
+.job-wrapper-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &_detail {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.company-name {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+
+.new,
+.feature {
+  padding: 4px;
+  color: #fff;
+  border-radius: 9px;
+}
+
+.new {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.feature {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.position {
+  color: hsl(180, 14%, 20%);
+  font-weight: 700;
+  font-size: 18px;
+
+  &:hover {
+    cursor: pointer;
+    color: hsl(180, 29%, 50%);
+  }
+}
+
+.detail {
+  color: hsl(180, 8%, 52%);
+}
+
+.job-wrapper-right {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  p {
+    padding: 8px;
+    background-color: hsl(180, 32%, 88%);
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(180, 29%, 50%);
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .job-wrapper {
+    flex-direction: column;
+    border-radius: 5px;
+  }
+
+  .job-wrapper-left {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .job-wrapper {
+    align-items: flex-start;
+  }
 }

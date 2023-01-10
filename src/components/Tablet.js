@@ -1,10 +1,10 @@
 import React from "react";
 
-const Tablet = () => {
+const Tablet = ({ item, onRemoveSearch }) => {
   return (
     <div className="tablet">
-      <p>Tablet</p>
-      <div>
+      <p>{item}</p>
+      <div onClick={onRemoveSearch.bind("this",item)}>
         <p>X</p>
       </div>
     </div>
